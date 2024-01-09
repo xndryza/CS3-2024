@@ -1,0 +1,90 @@
+body{
+		margin: 0;
+		height: 100%;
+		background-image:  url("homebg1.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position:  center;
+		
+	}
+	
+	#header{
+		padding: 0;
+		background-color: lavender;
+	
+	}
+	
+	#logo{
+		float: left;
+		margin-left: 8px;
+		margin-right: 8px;
+		margin-top: 3px;
+		
+	}
+	
+	#header-name{
+		font-size: 35px;
+		margin: 0;
+		color: purple;
+		font-family: Lucida Console;
+	
+	}
+	
+	search input[type=text]{
+			background-color: rgb(255, 124, 233)
+			color: black;
+			border: 2px solid black;
+			font-size: 18px;
+			font-family: Helvetica Now;
+			text-align: center;
+			margin-left: 30px;
+			text-shadow: 0px 1px 2px black;
+			width: 200px;
+			float: left;
+			margin: auto;
+			transform: translate (500 px);
+	}
+	
+	.topnav{
+		background-color: #D341EA;
+		overflow: hidden;
+	}
+		
+	.topnav a:link{
+		float: right;
+		color: #700b8a;
+		text-align: center;
+		padding:  14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+	}
+		
+	.topnav a:visited{
+		background-color: pink;
+		color: black;
+	}
+		
+	.topnav a:hover{
+		background-color: magenta;
+		color: ;	
+	}
+		
+	.topnav a.active{
+		background-color: magenta;
+		color: brown;
+	}
+	
+	section {
+        padding: 10px;
+        text-align: center;
+    }
+
+    footer {
+		background-color: lavender;
+		color: purple;
+		padding: 10px;
+		text-align: center;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+	}
