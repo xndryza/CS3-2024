@@ -1,0 +1,134 @@
+body{
+		margin: 0;
+		height: 100%;
+		background-image:  url("homebg1.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position:  center;
+		
+	}
+	
+	#header{
+		padding: 0;
+		background-color: lavender;
+	
+	}
+	
+	#logo{
+		float: left;
+		margin-left: 8px;
+		margin-right: 8px;
+		margin-top: 3px;
+		
+	}
+	
+	#header-name{
+		font-size: 35px;
+		margin: 0;
+		color: purple;
+		font-family: Lucida Console;
+	
+	}
+	
+	search input[type=text]{
+			background-color: rgb(255, 124, 233)
+			color: black;
+			border: 2px solid black;
+			font-size: 18px;
+			font-family: Helvetica Now;
+			text-align: center;
+			margin-left: 30px;
+			text-shadow: 0px 1px 2px black;
+			width: 200px;
+			float: left;
+			margin: auto;
+			transform: translate (500 px);
+	}
+	
+	.topnav{
+		background-color: #D341EA;
+		overflow: hidden;
+	}
+		
+	.topnav a:link{
+		float: right;
+		color: #700b8a;
+		text-align: center;
+		padding:  14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+	}
+		
+	.topnav a:visited{
+		background-color: pink;
+		color: black;
+	}
+		
+	.topnav a:hover{
+		background-color: magenta;
+		color: white;	
+	}
+		
+	.topnav a.active{
+		background-color: magenta;
+		color: brown;
+	}
+	
+	.sprite-icon {
+      display: flex;
+      gap: 10px;
+    }
+
+    .icon {
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+      background: url(https://www.saintpats.org/parish/wp-content/uploads/2015/07/social-icons-sprite.png) no-repeat;
+      transition: transform 0.3s, filter 0.3s;
+      margin-left: 10px;
+    }
+
+    .youtube {
+      background-position: -210px -110px;
+    }
+
+    .twitter {
+      background-position: -105px -110px;
+    }
+
+    .instagram {
+      background-position: -315px -110px;
+    }
+	
+
+    .icon:hover {
+      filter: grayscale(100%);
+    }
+	.container {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  padding-top: 40px;
+	  margin-right: 20px;
+	}
+
+	.box {
+	  width: 80%;
+	  max-width: 800px;
+	  height: 300px;
+	  border: 5px solid #3e4444;
+	  text-align: center;
+	  margin-top: 50px;
+	  margin-left: auto;
+	  margin-right: auto;
+	  background-color: #e6ffff;
+	}
+	
+	h1{
+      color: black;
+    }
+	
+	p{
+      line-height: 1.6;
+      color: black;;
+    }
