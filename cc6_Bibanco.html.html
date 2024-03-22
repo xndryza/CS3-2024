@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coding Challenge 6</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Quadratic Formula</h1>
+
+        <label for="a">a:</label>
+        <input type="number" id="a">
+
+        <label for="b">b:</label>
+        <input type="number" id="b">
+
+        <label for="c">c:</label>
+        <input type="number" id="c"> 
+		<br>
+		<br>
+
+        <button onclick="solve()">Find the root</button>
+
+        <h4 id="result"></h4>
+
+        <script>
+            function solve() {
+                const a = (parseFloat(document.getElementById('a').value));
+                const b = (parseFloat(document.getElementById('b').value));
+                const c = (parseFloat(document.getElementById('c').value));
+				
+				let x1, x2;
+
+				const discriminant = Math.pow(b, 2) - 4 * a * c;
+
+                if (discriminant > 0) {
+                    const x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                    const x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                    document.getElementById('result').textContent = `x1 = ${x1},  x2 = ${x2}`;
+                } else if (discriminant === 0) {
+                    const x = -b / (2 * a);
+                    document.getElementById('result').textContent = `x = ${x}`;
+                } else {
+                    document.getElementById('result').textContent = "The values of your x1 and x2 are imaginary number";
+                }
+            }
+        </script>
+    </body>
+</html>

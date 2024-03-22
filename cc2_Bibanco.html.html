@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coding Challenge 2
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: pink;
+            }
+
+            div {
+                background-color: white;
+                width: 300px;
+                height: 30px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> RGB Color Equivalent </h1>
+
+        <div id="color">
+            rgb(255, 255, 255)
+        </div>
+        <br>
+        Red: <br>
+        <input id="red" type="range" min="0" max="255" value="255" onchange="ccolor();"> <br>
+        Green: <br>
+        <input id="green" type="range" min="0" max="255" value="255" onchange="ccolor();"><br>
+        Blue: <br>
+        <input id="blue" type="range" min="0" max="255" value="255" onchange="ccolor();">
+
+        <script>
+            
+           function ccolor(){
+        var red = document.getElementById("red").value;
+        var green = document.getElementById("green").value;
+        var blue = document.getElementById("blue").value;
+        
+        var colorDiv = document.getElementById("color");
+        colorDiv.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+        colorDiv.textContent = `rgb(${red}, ${green}, ${blue})`;
+           
+        }
+           </script>
+    </body>
+</html>
