@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title> Anagram AA2 </title>
+</head>
+	
+	<body>
+	<script>
+
+
+		function anagram(input1, input2) {
+	 
+		let str1 = input1.replace(/\s/g, '').toLowerCase();
+		let str2 = input2.replace(/\s/g, '').toLowerCase();
+
+		
+		if (str1.length !== str2.length) {
+			return false;
+		}
+		return str1.split('').sort().join('') === str2.split('').sort().join('');
+		}
+
+		let word1 = prompt("Enter any 1st word: ");
+		let word2 = prompt("Enter any 2nd word: ");
+
+		let result = anagram(word1, word2);
+		if (result) {
+			alert("The words you typed are anagrams.");
+		} else {
+			alert("The words you typed are not anagrams.");
+		}
+	</script>
+	</body>
+</html>
