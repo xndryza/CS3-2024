@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign-Up Form AA2</title>
+<style>
+  body {
+    background-color: pink; 
+    font-family: Lucida, sans-serif;
+    margin: 20px;
+    padding: 0;
+  }
+
+  form {
+    background-color: #fff; 
+    border: 1px solid black; 
+    border-radius: 5px; 
+    padding: 20px;
+    margin: 0 auto; 
+    width: 400px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  h2 {
+	text-align: center;
+	color: Purple;
+	-webkit-text-stroke: 1.5px #ffffff;
+	font-size: 35px;
+
+  fieldset {
+    border: none; 
+  }
+
+  legend {
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"], input[type="email"], textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focus {
+    border: 1px solid green;
+  }
+
+  input[type="text"]:invalid, input[type="email"]:invalid, textarea:invalid, select:invalid {
+    border: 1px solid red;
+  }
+
+  #output {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Light gray background */
+  }
+
+  .buttons {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+ }
+    input[type="submit"],
+    input[type="reset"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+        background: #0056b3;
+    }
+    .output {
+        margin-top: 20px;
+        padding: 10px;
+        background: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<h2>SIGN UP SHEET</h2>
+
+<form id="signupForm">
+  <fieldset>
+    <legend>Personal Information</legend>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="username">Preferred Username:</label><br>
+    <input type="text" id="username" name="username" required><br>
+
+    <label for="gender">Gender:</label><br>
+    <select id="gender" name="gender" required>
+	  <option value="select">Select</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="notSpecified">Prefer not to mention</option>
+    </select><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br>
+
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="address">Address:</label><br>
+    <textarea id="address" name="address" required></textarea><br>
+
+    <label for="interest">Tell us about your interests:</label><br>
+    <textarea id="interest" name="interest" required></textarea><br>
+	
+	 <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
+
+<div id="output"></div>
+
+<script>
+     function checkInput(input) {
+        if (input.value === "") {
+            input.style.border = "1px solid red";
+        } else {
+            input.style.border = "1px solid green";
+        }
+    }
+
+    function resetBorder(input) {
+        input.style.border = "1px solid #ccc";
+    }
+
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const username = document.getElementById("username").value;
+        const gender = document.getElementById("gender").value;
+        const email = document.getElementById("email").value;
+        const address = document.getElementById("address").value;
+        const interest = document.getElementById("interest").value;
+
+        const outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = `
+            <h2>Sign-up Information:</h2>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Preferred Username:</strong> ${username}</p>
+            <p><strong>Gender:</strong> ${gender}</p>
+            <p><strong>Email Address:</strong> ${email}</p>
+            <p><strong>Address:</strong> ${address}</p>
+            <p><strong>Interests:</strong> ${interest}</p>
+        `;
+    });
+
+    document.querySelector('input[type="reset"]').addEventListener("click", function() {
+        document.getElementById("output").innerHTML = "";
+    });
+</script>
+</html>
+  
